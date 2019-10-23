@@ -23,7 +23,11 @@ public class FindNumberOfIslandsFunction {
 	}
 
 	public int dfs(char[][] grid, int i, int j) {
-		// Error checking
+		// i < 0, means it went above the grid
+		// i >= grid.length, means we went below the grid
+		// j < 0, means when left out of the grid
+		// j >= grid[i].length, mean we went right out of the grid
+		// grid[i][j] == '0', if its 0, we don't care
 		if (i < 0 || i >= grid.length || j < 0 || j >= grid[i].length || grid[i][j] == '0') {
 			return 0;
 		}
