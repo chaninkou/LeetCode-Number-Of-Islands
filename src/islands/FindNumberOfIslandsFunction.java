@@ -12,7 +12,7 @@ public class FindNumberOfIslandsFunction {
 
 		for (int i = 0; i < grid.length; i++) {
 			for (int j = 0; j < grid[i].length; j++) {
-				// If we see 1
+				// If we see 1, thats mean it is an island
 				if (grid[i][j] == '1') {
 					numOfIslands += dfs(grid, i, j);
 				}
@@ -47,6 +47,8 @@ public class FindNumberOfIslandsFunction {
 		// To the left
 		dfs(grid, i, j - 1);
 
+		
+		// If its gets here, that means there is an island
 		return 1;
 	}
 }
