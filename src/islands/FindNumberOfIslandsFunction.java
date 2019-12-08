@@ -2,7 +2,7 @@ package islands;
 
 public class FindNumberOfIslandsFunction {
 	public int numIslands(char[][] grid) {
-		// Error checking
+		// Error checking, always do error checking first
 		if (grid == null || grid.length == 0) {
 			return 0;
 		}
@@ -10,6 +10,7 @@ public class FindNumberOfIslandsFunction {
 		// number of islands
 		int numOfIslands = 0;
 
+		// loop through the whole grid
 		for (int i = 0; i < grid.length; i++) {
 			for (int j = 0; j < grid[i].length; j++) {
 				// If we see 1, thats mean it is an island
@@ -35,6 +36,8 @@ public class FindNumberOfIslandsFunction {
 		// If the index we are on is 1, then set it to 0 so we don't revisit it
 		grid[i][j] = '0';
 
+		// Make sense to go down, top, right, left since we start from index 0
+		
 		// Down
 		dfs(grid, i + 1, j);
 
