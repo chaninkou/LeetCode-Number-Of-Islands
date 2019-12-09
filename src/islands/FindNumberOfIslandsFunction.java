@@ -15,6 +15,7 @@ public class FindNumberOfIslandsFunction {
 			for (int j = 0; j < grid[i].length; j++) {
 				// If we see 1, thats mean it is an island
 				if (grid[i][j] == '1') {
+					// Make sure to add, not equal
 					numOfIslands += dfs(grid, i, j);
 				}
 			}
