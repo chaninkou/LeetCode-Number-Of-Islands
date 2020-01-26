@@ -11,6 +11,7 @@ public class FindNumberOfIslandsFunction {
 		int numOfIslands = 0;
 
 		// loop through the whole grid
+		// n x m since the col and row doesn't need to be the same
 		for (int i = 0; i < grid.length; i++) {
 			for (int j = 0; j < grid[i].length; j++) {
 				// If we see 1, thats mean it is an island
