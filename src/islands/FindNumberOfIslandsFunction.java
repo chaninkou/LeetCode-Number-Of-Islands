@@ -26,6 +26,7 @@ public class FindNumberOfIslandsFunction {
 		return numOfIslands;
 	}
 
+	// Main point of dfs is to switch all 1 to 0 that is connected
 	// This dfs will just go down from current element and swap any 1 to zero, always return 1 when the recursive is done
 	// Reason why there is Down, Up, right, left because an islands could be all 1's next to each other
 	public int dfs(char[][] grid, int i, int j) {
